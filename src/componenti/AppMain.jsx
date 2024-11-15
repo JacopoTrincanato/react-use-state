@@ -18,20 +18,32 @@ export default function AppMain() {
 
     return (
         <main>
-            <div className="tab">
+            <div className="container">
+                <div className="tab">
+                    {languages.map((language, index) =>
+
+                        <div className="tabItem" key={language.id}>
+
+                            <button className="btn" onClick={handleClick} data-index={index}>{language.title}</button>
+
+                        </div>
+
+                    )}
+
+                </div>
+
                 {languages.map((language, index) =>
 
-                    <div className="tabItem" key={language.id}>
-                        <button className="btn" onClick={handleClick} data-index={index}>{language.title}</button>
-                        <div className={active == index ? 'active' : 'hide'}>
-                            <h2>{language.title}</h2>
-                            <p>{language.description}</p>
-                        </div>
+                    <div className={active == index ? 'active' : 'hide'} key={language.id}>
+                        <h2>{language.title}</h2>
+                        <p>{language.description}</p>
                     </div>
 
                 )}
-
             </div>
+
+
+
 
         </main>
     )

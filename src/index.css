@@ -18,10 +18,13 @@ p {
   margin-top: 0.5rem;
 }
 
-.tab {
+.container {
   width: 80%;
-  display: flex;
   margin: 3rem auto;
+}
+
+.tab {
+  display: flex;
 }
 
 .btn {
@@ -32,6 +35,11 @@ p {
   padding: 0.5rem 0.75rem;
   font-size: 1.2rem;
   margin-right: 1rem;
+}
+
+.btn:hover {
+  background-color: #ffc107;
+  color: black;
 }
 
 .active {
