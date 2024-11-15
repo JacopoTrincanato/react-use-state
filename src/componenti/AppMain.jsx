@@ -5,7 +5,7 @@ import { useState } from "react"
 import languages from "../database/languages"
 
 //creo il componente AppMain
-export default function AppHeader() {
+export default function AppMain() {
 
     const [active, setActive] = useState(0)
 
