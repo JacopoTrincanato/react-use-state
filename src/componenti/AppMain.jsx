@@ -54,9 +54,6 @@ export default function AppMain() {
                 )}
             </div>
 
-
-
-
         </main>
     )
 }
