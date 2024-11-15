@@ -20,6 +20,7 @@ export default function AppMain() {
         <main>
             <div className="tab">
                 {languages.map((language, index) =>
+
                     <div className="tabItem" key={language.id}>
                         <button className="btn" onClick={handleClick} data-index={index}>{language.title}</button>
                         <div className={active == index ? 'active' : 'hide'}>
