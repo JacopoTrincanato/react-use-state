@@ -37,7 +37,7 @@ p {
   margin-right: 1rem;
 }
 
-.btn:hover {
+.clickedButton {
   background-color: #ffc107;
   color: black;
 }

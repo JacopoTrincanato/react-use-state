@@ -11,9 +11,21 @@ export default function AppMain() {
 
     function handleClick(e) {
 
+        // Prendo tutti i bottoni dalla DOM
+        const btnEl = document.querySelectorAll('.btn');
+
+        // Rimuovo la classe "clickedButton" da tutti i bottoni
+        btnEl.forEach((btn) => btn.classList.remove('clickedButton'));
+
+        // Aggiungo la classe "clickedButton" al bottone cliccato
+        e.target.classList.add('clickedButton');
+
+
         const newActive = Number(e.target.getAttribute('data-index'));
 
         setActive(newActive)
+
+
     }
 
     return (
