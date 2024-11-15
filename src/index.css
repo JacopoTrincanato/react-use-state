@@ -13,3 +13,29 @@ header {
   background-color: #f8f9fa;
   padding: 2rem 1rem;
 }
+
+.tab {
+  width: 80%;
+  display: flex;
+  margin: 3rem auto;
+}
+
+.btn {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.active {
+  border: 1px solid lightgray;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
