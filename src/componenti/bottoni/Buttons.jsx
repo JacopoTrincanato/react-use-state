@@ -1,5 +1,5 @@
-//importo lo useState
-import { useState } from "react"
+//importo lo style
+import style from './Buttons.module.css'
 
 //importo languages
 import languages from "../../database/languages"
@@ -27,12 +27,12 @@ export default function Buttons() {
     }
 
     return (
-        <div className="tab">
+        <div className={style.tab}>
             {languages.map((language, index) =>
 
-                <div className="tabItem" key={language.id}>
+                <div className={style.tabItem} key={language.id}>
 
-                    <button className="btn" onClick={handleClick} data-index={index}>{language.title}</button>
+                    <button className={style.btn} onClick={handleClick} data-index={index}>{language.title}</button>
 
                 </div>
 
