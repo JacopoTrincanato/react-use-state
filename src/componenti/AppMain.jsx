@@ -7,7 +7,7 @@ import languages from "../database/languages"
 //creo il componente AppMain
 export default function AppMain() {
 
-    const [active, setActive] = useState(0)
+    const [active, setActive] = useState(-1)
 
     function handleClick(e) {
 
@@ -44,14 +44,17 @@ export default function AppMain() {
 
                 </div>
 
-                {languages.map((language, index) =>
+                <div className="card">
+                    {active === -1 ? <span>nessun linguaggio selezionato</span> : (languages.map((language, index) =>
 
-                    <div className={active == index ? 'active' : 'hide'} key={language.id}>
-                        <h2>{language.title}</h2>
-                        <p>{language.description}</p>
-                    </div>
+                        <div className={active == index ? 'active' : 'hide'} key={language.id}>
+                            <h2>{language.title}</h2>
+                            <p>{language.description}</p>
+                        </div>
 
-                )}
+                    ))}
+                </div>
+
             </div>
 
         </main>

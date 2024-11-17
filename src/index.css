@@ -42,7 +42,7 @@ p {
   color: black;
 }
 
-.active {
+.card {
   border: 1px solid lightgray;
   padding: 1rem;
   border-radius: 0.5rem;
