@@ -22,3 +22,33 @@ p {
   width: 80%;
   margin: 3rem auto;
 }
+
+.tab {
+  display: flex;
+}
+
+.btn {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.clickedButton {
+  background-color: #ffc107;
+  color: black;
+}
+
+.card {
+  border: 1px solid lightgray;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.hide {
+  display: none;
+}

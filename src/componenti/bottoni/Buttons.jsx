@@ -14,10 +14,6 @@ export default function Buttons() {
 
     function handleClick(e) {
 
-        // Aggiungo la classe "clickedButton" al bottone cliccato
-        e.target.classList.add('clickedButton');
-
-
         const newActive = Number(e.target.getAttribute('data-index'));
 
         setActive(newActive)
