@@ -7,6 +7,8 @@ import languages from "../../database/languages"
 //creo il componente Buttons
 export default function Buttons() {
 
+    const [active, setActive] = useState(-1)
+
     function handleClick(e) {
 
         // Prendo tutti i bottoni dalla DOM
