@@ -1,3 +1,6 @@
+//importo useState da react
+import { useState } from 'react';
+
 //importo lo style
 import style from './Buttons.module.css'
 
@@ -10,12 +13,6 @@ export default function Buttons() {
     const [active, setActive] = useState(-1)
 
     function handleClick(e) {
-
-        // Prendo tutti i bottoni dalla DOM
-        const btnEl = document.querySelectorAll('.btn');
-
-        // Rimuovo la classe "clickedButton" da tutti i bottoni
-        btnEl.forEach((btn) => btn.classList.remove('clickedButton'));
 
         // Aggiungo la classe "clickedButton" al bottone cliccato
         e.target.classList.add('clickedButton');
@@ -34,7 +31,7 @@ export default function Buttons() {
 
                 <div className={style.tabItem} key={language.id}>
 
-                    <button className={style.btn} onClick={handleClick} data-index={index}>{language.title}</button>
+                    <button className={`${style.btn} ${active === index ? style.clickedButton : ''}`} onClick={handleClick} data-index={index}>{language.title}</button>
 
                 </div>
 

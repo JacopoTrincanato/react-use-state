@@ -6,7 +6,7 @@ import languages from "../../database/languages"
 
 //creo il componente Card
 export default function Card() {
-    const [active, setActive] = useState(-1)
+    const active = 0
 
     return (
         <div className={style.card}>
