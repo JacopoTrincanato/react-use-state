@@ -1,6 +1,3 @@
-//importo useState da react
-import { useState } from 'react';
-
 //importo lo style
 import style from './Buttons.module.css'
 
@@ -8,16 +5,22 @@ import style from './Buttons.module.css'
 import languages from "../../database/languages"
 
 //creo il componente Buttons
-export default function Buttons() {
-
-    const [active, setActive] = useState(-1)
+export default function Buttons({ active, setActive }) {
 
     function handleClick(e) {
+
+        // Prendo tutti i bottoni dalla DOM
+        const btnEl = document.querySelectorAll('.btn');
+
+        // Rimuovo la classe "clickedButton" da tutti i bottoni
+        btnEl.forEach((btn) => btn.classList.remove('clickedButton'));
+
+        // Aggiungo la classe "clickedButton" al bottone cliccato
+        e.target.classList.add('clickedButton');
 
         const newActive = Number(e.target.getAttribute('data-index'));
 
         setActive(newActive)
-
 
     }
 

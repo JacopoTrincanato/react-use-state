@@ -1,6 +1,6 @@
 import './App.css'
 
-//importo i componenti
+//importo i componenti AppHeader e AppMain
 import AppHeader from './componenti/AppHeader'
 import AppMain from './componenti/AppMain'
 
