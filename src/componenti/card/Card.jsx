@@ -1,22 +1,8 @@
-//importo useState da react
-import { useState } from 'react';
-
 //importo lo style
 import style from './Card.module.css'
 
-//importo languages
-import languages from '../../database/languages';
-
 //creo il componente Card
-export default function Card() {
-    const [active, setActive] = useState(-1)
-
-    const newActive = Number(active);
-
-    setActive(newActive)
-
-
-
+export default function Card({ active, languages }) {
 
     return (
         <div className={style.card}>

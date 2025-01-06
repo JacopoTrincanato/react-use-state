@@ -2,6 +2,7 @@ import { useState } from "react"
 
 //importo languages
 import languages from "../database/languages"
+import Card from "./card/Card";
 
 //creo il componente AppMain
 export default function AppMain() {
@@ -18,7 +19,6 @@ export default function AppMain() {
 
         // Aggiungo la classe "clickedButton" al bottone cliccato
         e.target.classList.add('clickedButton');
-
 
         const newActive = Number(e.target.getAttribute('data-index'));
 
@@ -43,7 +43,7 @@ export default function AppMain() {
 
                 </div>
 
-                <div className="card">
+                {/*<div className="card">
                     {active === -1 ? (<span>Nessun linguaggio selezionato</span>) :
 
                         (languages.map((language, index) =>
@@ -55,7 +55,9 @@ export default function AppMain() {
 
                         )
                         )}
-                </div>
+                </div>*/}
+
+                <Card active={active} languages={languages} />
 
             </div>
 
